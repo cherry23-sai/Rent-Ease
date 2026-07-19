@@ -1,0 +1,136 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--ink);
+  color: #E7E9ED;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 0 8px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.sidebar-brand .dot {
+  color: var(--accent);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.sidebar-link {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #B7BEC9;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.sidebar-link.active {
+  background: var(--accent);
+  color: #14181F;
+}
+
+.sidebar-foot {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  margin-top: 12px;
+}
+
+.sidebar-role {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 4px 8px;
+}
+
+.sidebar-name {
+  font-size: 13px;
+  color: #E7E9ED;
+  margin: 0 0 10px 8px;
+}
+
+.sidebar-logout {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #E7E9ED;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.sidebar-logout:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.main {
+  flex: 1;
+  padding: 32px 40px 64px;
+  max-width: 1100px;
+}
+
+.page-head {
+  margin-bottom: 28px;
+}
+
+.page-eyebrow {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--slate-soft);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--ink);
+}
+
+.page-sub {
+  color: var(--slate);
+  margin: 6px 0 0;
+  font-size: 14.5px;
+}
+
+@media (max-width: 860px) {
+  .shell { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: relative; flex-direction: row; align-items: center; padding: 12px 16px; }
+  .sidebar-nav { flex-direction: row; flex-wrap: wrap; }
+  .sidebar-foot { display: none; }
+  .main { padding: 24px; }
+}

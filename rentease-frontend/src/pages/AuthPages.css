@@ -1,0 +1,67 @@
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(232, 135, 30, 0.10), transparent 40%),
+    var(--ink);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper-card);
+  border-radius: 14px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.auth-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.auth-brand .dot { color: var(--accent); }
+
+.auth-tagline {
+  color: var(--slate);
+  font-size: 13.5px;
+  margin: 0 0 26px;
+}
+
+.auth-tabs {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 22px;
+}
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--slate);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.auth-tab.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.auth-foot {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--slate);
+}
+.auth-foot a { color: var(--accent-dark); font-weight: 600; }
